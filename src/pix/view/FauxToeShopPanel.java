@@ -73,10 +73,12 @@ import pixLab.classes.Picture;
 			"MirrorTemple", //11
 			"MirrorArms", //12
 			"MirrorGull", //13
-			"ColorFilter", //14
-			"MakeFilter", //15
-			"Copy",  //16
-			"EdgeDetection", //17
+			"ColorFilter",//14
+			"ColorFilter 1",//15
+			"ColorFilter 2",//16
+			"MakeFilter", //17
+			"Copy",  //18
+			"EdgeDetection", //19
 			};
 			filterBox = new JComboBox (filterArray);
 	
@@ -166,7 +168,7 @@ import pixLab.classes.Picture;
 					else if(filterBox.getSelectedIndex() == 8)
 					{
 						resetButton();
-						//basePicture.MirrorHorizontal();
+						basePicture.MirrorHorizontal();
 						setupPicture();
 					}
 					else if(filterBox.getSelectedIndex() == 9)
@@ -208,16 +210,29 @@ import pixLab.classes.Picture;
 					else if(filterBox.getSelectedIndex() == 15)
 					{
 						resetButton();
-						basePicture.makeFilter();
+						basePicture.rotateColorFilter1();
 						setupPicture();
 					}
 					else if(filterBox.getSelectedIndex() == 16)
 					{
 						resetButton();
-						//basePicture.Copy();
+						basePicture.rotateColorFilter2();
 						setupPicture();
 					}
 					else if(filterBox.getSelectedIndex() == 17)
+					{
+						resetButton();
+						basePicture.makeFilter();
+						setupPicture();
+					}
+					else if(filterBox.getSelectedIndex() == 18)
+					{
+						resetButton();
+						basePicture = new Picture("doesNothing.jpg");
+						//basePicture.copy();
+						setupPicture();
+					}
+					else if(filterBox.getSelectedIndex() == 19)
 					{
 						resetButton();
 						basePicture.edgeDetection(50);

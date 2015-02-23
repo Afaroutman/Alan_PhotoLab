@@ -21,7 +21,7 @@ public class PictureTester
   {
 	  Picture zinogre = new Picture("zinogre3.jpg");
 	  zinogre.explore();
-	//  zinogre.MirrorHorizontal();
+	  zinogre.MirrorHorizontal();
 	  zinogre.explore();
   }
   
@@ -142,7 +142,7 @@ public class PictureTester
 //      testGrayscale();
 //	    testFixUnderwater();
 //	    testMirrorVertical();
-	    testMirrorHorizontal();
+//	    testMirrorHorizontal();
 //	    testMirrorTemple();
 //	    testMirrorArms();
 //	    testMirrorGull();
