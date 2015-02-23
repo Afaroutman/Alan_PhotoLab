@@ -127,6 +127,20 @@ public class PictureTester
 	  zinogre.rotateColorFilter();
 	  zinogre.explore();
   }
+  public static void testColorFilter1()
+  {
+	  Picture zinogre = new Picture("zinogre.jpg");
+	  zinogre.explore();
+	  zinogre.rotateColorFilter1();
+	  zinogre.explore();
+  }
+  public static void testColorFilter2()
+  {
+	  Picture zinogre = new Picture("zinogre.jpg");
+	  zinogre.explore();
+	  zinogre.rotateColorFilter2();
+	  zinogre.explore();
+  }
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
@@ -148,6 +162,8 @@ public class PictureTester
 //	    testMirrorGull();
 //	    testMirrorDiagonal();
 //	  	testColorFilter();
+//	    testColorFilter1();
+//	    testColorFilter2();
 //	    testMakeFilter();
 //	    testCollage();
 //	    testCopy();

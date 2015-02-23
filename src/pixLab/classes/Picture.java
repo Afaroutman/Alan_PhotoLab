@@ -361,7 +361,43 @@ public class Picture extends SimplePicture
 			}
 		}
   }
-  
+  public void rotateColorFilter1()
+  {
+	  Pixel [][] matrix = this.getPixels2D();
+		
+		for(int row = 0; row < matrix.length; row++)
+		{
+			for(int col = 0; col < matrix[0].length; col++)  
+			{
+				int oldRed, oldBlue, oldGreen;
+				oldRed = matrix[row][col].getRed();
+				oldBlue = matrix[row][col].getBlue();
+				oldGreen = matrix[row][col].getGreen();
+				matrix[row][col].setGreen(oldBlue);
+				matrix[row][col].setBlue(oldRed);
+				matrix[row][col].setRed(oldGreen);
+			}
+		}
+  }
+		public void rotateColorFilter2()
+		  {
+			  Pixel [][] matrix = this.getPixels2D();
+				
+				for(int row = 0; row < matrix.length; row++)
+				{
+					for(int col = 0; col < matrix[0].length; col++)  
+					{
+						int oldRed, oldBlue, oldGreen;
+						oldRed = matrix[row][col].getRed();
+						oldBlue = matrix[row][col].getBlue();
+						oldGreen = matrix[row][col].getGreen();
+						matrix[row][col].setGreen(oldRed);
+						matrix[row][col].setBlue(oldBlue);
+						matrix[row][col].setRed(oldGreen);
+					}
+				}
+		  
+		  }
   public void makeFilterBig()
   {
 	  Pixel [][] pixelMatrix = this.getPixels2D();
@@ -475,5 +511,5 @@ public class Picture extends SimplePicture
     beach.zeroBlue();
     beach.explore();
   }
-
-} // this } is the end of class Picture, put all new methods before this
+}
+ // this } is the end of class Picture, put all new methods before this
